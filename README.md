@@ -214,6 +214,46 @@ Customizable CSS: Define styles for better HTML output aesthetics.
 Terminal GUI: Progress bars and status updates using the Rich library.
 
 
+## **Advanced Features**
+
+### **Non-Standard JSON Support**
+The script includes mechanisms to handle and repair common JSON formatting issues, such as:
+- Trailing commas.
+- Unescaped special characters.
+- Mixed data types within arrays.
+If a JSON file cannot be repaired, it will be skipped, and an error will be logged in `output_logs/error_log.txt`.
+
+### **Filters**
+The script provides advanced filtering options to process specific messages or users:
+1. **Author Filter**: Include messages only from a specific author.
+2. **Keyword Filter**: Search for messages containing specific keywords.
+3. **Date Range Filter**: Extract messages within a specific date range.
+
+### **Output File Organization**
+- Outputs are saved in the `output_logs/` directory.
+- Subdirectories are created for each input folder to maintain structure.
+
+### **Output Naming Convention**
+- Each file is named based on the original JSON filename and output format:
+  - For example: `chat1.json` → `chat1.html`, `chat1.md`, `chat1.csv`.
+
+---
+
+## **Terminal GUI**
+
+The terminal GUI provides real-time feedback during script execution:
+- Progress bars for file processing.
+- Error logs displayed dynamically.
+- Real-time statistics on processed, skipped, and errored files.
+
+### Example of Terminal GUI:
+```plaintext
+Processing: chat1.json [#####-----] 50% | Messages: 500/1000
+Status: Converting chat1.json to HTML, Markdown, and CSV...
+Errors: None | Skipped: 0 | Processed: 1/5
+
+
+
 
 ---
 
