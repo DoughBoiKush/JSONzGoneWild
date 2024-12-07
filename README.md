@@ -30,10 +30,13 @@ This script converts Discord JSON chat logs into **HTML**, **Markdown**, and **C
 
 ### **Python Libraries**
 Install the required Python libraries:
-```bash
+``` bash
+
 pip install rich markdown
 
-JSON Requirements
+```
+ 
+  ##  **JSON Requirements**
 
 JSON files should represent Discord chat logs in a dictionary or list format. The script includes support for repairing common JSON inconsistencies.
 
@@ -41,10 +44,12 @@ JSON files should represent Discord chat logs in a dictionary or list format. Th
 
 ---
 
-Folder Structure
+## **Folder Structure**
 
 Before running the script, organize your files as follows:
 
+
+```
 project/
 ├── input_logs/          # Directory for JSON chat logs
 │   ├── chat1.json
@@ -59,20 +64,28 @@ project/
 ├── converter.py         # Main script
 └── custom.css           # Optional CSS file for styling HTML
 
-
+```
 ---
 
-Installation
+## **Installation**
 
 1. Clone or download the repository:
 
+
+```
 git clone <repository_url>
 cd project
+
+```
 
 
 2. Install dependencies:
 
+
+```
 pip install rich markdown
+
+```
 
 
 3. (Optional) Create a custom.css file to define your own HTML styling.
@@ -85,35 +98,33 @@ pip install rich markdown
 Usage
 
 Run the script with the following command:
-
+```
 python3 converter.py <input_directory> [options]
-
-Options
-
+```
 
 ---
 
 Examples
 
 1. Convert all logs in the input_logs/ directory:
-
+```
 python3 converter.py input_logs/
-
+```
 
 2. Convert logs from a specific author:
-
+```
 python3 converter.py input_logs/ --author "JohnDoe"
-
+```
 
 3. Convert logs with a date range filter and custom CSS:
-
+```
 python3 converter.py input_logs/ --start-date 2024-01-01 --end-date 2024-12-31 --css-file custom.css
-
+```
 
 4. Enable multi-threading for better performance:
-
+```
 python3 converter.py input_logs/ --threads 8
-
+```
 
 
 
@@ -163,7 +174,7 @@ Fields missing in JSON files are replaced with placeholders (e.g., "Unknown").
 CSS Customization
 
 To customize the HTML output style, create or modify the custom.css file. Example:
-
+```
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -177,16 +188,16 @@ body {
 }
 
 Use the --css-file option to specify a custom CSS file.
-
+```
 
 ---
 
 Deleting Prior Outputs
 
 The script includes a utility to delete all previously generated outputs:
-
+```
 python3 startfresh.py
-
+```
 This removes only the output files (HTML, Markdown, CSV) in the output_logs/ directory.
 
 
